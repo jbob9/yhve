@@ -1,0 +1,3 @@
+.navbar, .login-btn span {
+  @apply hidden;
+}
