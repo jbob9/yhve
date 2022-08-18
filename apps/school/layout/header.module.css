@@ -1,0 +1,120 @@
+
+.header {
+  @apply fixed top-0 left-0 w-full;
+  padding-block: 25px;
+  z-index: 4;
+  transition: padding var(--transition);
+}
+
+.header.active {
+  background: var(--cultured);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+  padding-block: 20px;
+}
+
+.header .container {
+  @apply flex justify-center items-center;
+}
+
+.header .logo { width: 120px; }
+
+.logo img { width: 100%; }
+
+.menu_open_btn {
+  font-size: 35px;
+  color: var(--mango-tango);
+}
+
+.navbar {
+  @apply fixed top-0 w-full h-full;
+  left: -250px;
+  max-width: 250px;
+  background: var(--mantis);
+  padding: 80px 20px;
+  transition: 0.15s ease-in;
+  z-index: 3;
+}
+
+.navbar.active {
+  left: 0;
+  transition: 0.25s ease-out;
+}
+
+.menu_close_btn {
+  @apply absolute top-0 right-0;
+  font-size: 30px;
+  padding: 5px;
+  background: var(--rich-black-fogra-29);
+  color: var(--white);
+}
+
+.navbar .logo {
+  width: 160px;
+  margin-bottom: 30px;
+  margin-inline: auto;
+}
+
+.navbar_list { margin-bottom: 15px; }
+
+.navbar_link {
+  color: var(--rich-black-fogra-29);
+  font-weight: var(--fw-500);
+  padding-block: 15px;
+  font-family: var(--dm-sans);
+}
+
+.overlay {
+  @apply fixed inset-0 opacity-0 pointer-events-none;
+  background: hsla(0, 0%, 0%, 0.7);
+  transition: 0.15s ease-out;
+  z-index: 3;
+}
+
+.overlay.active {
+  @apply pointer-events-auto opacity-100;
+}
+
+@media (min-width: 1024px) {
+  .header .logo { margin-right: 25px; }
+
+  .menu_open_btn,
+  .menu_close_btn,
+  .navbar .logo { @apply hidden; }
+
+  .navbar {
+    @apply static p-0 flex justify-center items-center;
+    max-width: unset;
+    height: unset;
+    background: none;
+  }
+
+  .navbar_list {
+    @apply flex justify-center items-center mb-0;
+  }
+
+  .navbar_link {
+    position: relative;
+    font-size: var(--fs-5);
+    padding: 20px 25px;
+  }
+
+  .navbar_link::after {
+    --scale: 0;
+    
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%) scale(var(--scale));
+    background: var(--orange-web);
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    opacity: 0.5;
+    transition: var(--transition);
+  }
+
+  .navbar_link:is(:hover, :focus)::after { --scale: 1; }
+
+  .overlay { display: none; }
+}
