@@ -74,6 +74,10 @@
   @apply pointer-events-auto opacity-100;
 }
 
+@media (min-width: 550px) {
+  .header .logo { min-width: 160px; }
+}
+
 @media (min-width: 1024px) {
   .header .logo { margin-right: 25px; }
 

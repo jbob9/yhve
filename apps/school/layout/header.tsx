@@ -1,9 +1,11 @@
 import s from './header.module.css'
+import cn from "classnames"
+import {IconMenu, IconX} from "@tabler/icons"
 
 const Header = () => {
   return (
-    <header className={s.header} data-header>
-    <div className="flex items-center justify-between">
+    <header className={cn(s.header, s.active)} data-header>
+    <div className={s.container}>
 
       <div className={s.overlay} data-overlay></div>
 
@@ -14,12 +16,14 @@ const Header = () => {
 
       <button className={s.menu_open_btn} data-menu-open-btn>
         {/* <ion-icon name="menu-outline"></ion-icon> */}
+        <IconMenu/>
       </button>
 
       <nav className={s.navbar} data-navbar>
 
         <button className={s.menu_close_btn} data-menu-close-btn>
           {/* <ion-icon name="close-outline"></ion-icon> */}
+          <IconX/>
         </button>
 
         <a href="#" className={s.logo}>

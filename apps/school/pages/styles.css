@@ -64,3 +64,34 @@
   background: var(--gambog);
   transform: translateY(-3px);
 }
+
+.section-text,
+.card-text,
+.card-subtitle {
+  font-family: var(--ff-rubik);
+  color: var(--sonic-silver);
+  font-size: var(--fs-5);
+  line-height: 1.8;
+}
+.h1,
+.h2,
+.h3 {
+  font-family: var(--ff-poppins);
+  color: var(--rich-black-fogra-29);
+}
+
+.h1 {
+  font-size: var(--fs-1);
+  line-height: 1.4;
+  font-weight: var(--fw-700);
+}
+.h2 {
+  font-size: var(--fs-1);
+  line-height: 1.6;
+}
+
+.h3 {
+  color: var(--onyx);
+  font-size: var(--fs-3);
+  line-height: 1.3;
+}

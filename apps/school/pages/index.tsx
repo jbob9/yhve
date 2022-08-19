@@ -1,9 +1,14 @@
+import AboutSection from "../components/aboutSection"
+import Hero from "../components/hero"
 import Layout from "../layout"
 
 const Home = () => {
   return (
     <Layout>
-      <div>Home</div>
+      <article>
+        <Hero/>
+        <AboutSection/>
+      </article>
     </Layout>
   )
 }

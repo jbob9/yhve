@@ -1,0 +1,36 @@
+
+.hero {
+  background: var(--gradient);
+  padding: 150px 0 var(--section-padding);
+}
+
+.hero_banner { margin-bottom: 30px; }
+
+.hero_banner img { width: 100%; }
+
+.hero_title { margin-bottom: 20px; }
+
+.hero .section_text { margin-bottom: 45px; }
+
+@media (min-width: 768px) {
+  .hero_banner {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hero_banner {
+    margin-bottom: 0;
+    order: 1;
+  }
+}
+
