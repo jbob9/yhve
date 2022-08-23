@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTop from '../components/backToTop'
 import Footer from './footer'
 import Header from './header'
 
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
         {children}
       </main>
       <Footer/>
+      <BackToTop/>
     </div>
   )
 }

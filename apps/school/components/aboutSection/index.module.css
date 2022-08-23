@@ -7,6 +7,10 @@
 
 .about_img { width: 100%; }
 
+.vector_line { display: none; }
+
+
+
 .play_btn {
   position: absolute;
   bottom: 24%;
@@ -63,6 +67,11 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
+  }
+
+  .vector_line {
+    display: block;
+    position: absolute;
   }
 
   .about_banner {

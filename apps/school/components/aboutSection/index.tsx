@@ -10,9 +10,9 @@ const AboutSection = () => {
 
       <figure className={s.about_banner}>
 
-        <img src="./assets/images/about-banner.jpg" alt="Eduland students" className={s.about_img}/>
+        <img src="./assets/images/about-banner-2.png" alt="Eduland students" className={s.about_img}/>
 
-        <img src="./assets/images/about-abs-2.jpg" alt="Vector line art" className={s.vector_line}/>
+        <img src="./assets/images/about-vector.svg" alt="Vector line art" className={s.vector_line}/>
 
         <button className={s.play_btn}>
           {/* <ion-icon name="play"></ion-icon> */}

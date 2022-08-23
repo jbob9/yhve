@@ -1,0 +1,21 @@
+.back_top_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: hsl(36, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  font-size: 22px;
+  padding: 12px;
+  border-radius: 50%;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease;
+}
+
+.back_top_btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-10px);
+}
+
