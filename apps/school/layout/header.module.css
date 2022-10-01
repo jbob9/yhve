@@ -1,0 +1,132 @@
+.header {
+  @apply fixed w-full top-0 left-0 z-30 py-3 px-2;
+}
+
+.header.active {
+  @apply bg-white;
+  box-shadow: 0px 4px 10px hsla(0, 0%, 0%, 0.05);
+}
+
+.header .container {
+  @apply flex items-center justify-between xl:justify-start;
+}
+
+
+.header_actions {
+  @apply flex items-center;
+  gap: 5px;
+}
+
+.header_action_btn {
+  @apply text-teal-500 bg-white p-3;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.06);
+}
+
+.navbar {
+  @apply fixed top-0 bg-white w-full h-full;
+  left: -300px;
+  max-width: 300px;
+  z-index: 2;
+  visibility: hidden;
+  transition: 0.25s cubic-bezier(0.51, 0.03, 0.64, 0.28);
+}
+
+.navbar.active {
+  visibility: visible;
+  transform: translateX(300px);
+  transition: 0.5s cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+.navbar_top {
+  @apply flex justify-between items-center py-14 px-5;
+  border-block-end: 1px solid hsl(0, 0%, 93%);
+}
+
+.navbar .logo { font-size: 2rem; }
+
+.nav_close_btn {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(247, 35%, 19%);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow:  0 8px 20px hsla(0, 0%, 0%, 0.06);
+}
+
+.navbar_list { padding: 15px 20px; }
+
+.navbar_item {
+  @apply text-gray-600 py-2;
+}
+
+.navbar_item:not(:last-child) { border-block-end: 1px solid hsl(0, 0%, 93%); }
+
+.navbar_link {
+  font-weight: 500;
+  padding-block: 8px;
+  transition: 0.25s ease;
+}
+
+.navbar_link:is(:hover, :focus) { 
+  @apply text-teal-500;
+ }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 575px) {
+  .header .container { max-width: unset; }
+}
+
+@media (min-width: 768px) {
+  .header .container { padding-inline: 30px; }
+  .header_actions { gap: 15px; }
+  .header_action_btn:not(.login-btn) { padding: 17px; }
+}
+
+@media (min-width: 1200px) {
+
+  .nav_open_btn,
+  .navbar_top,
+  .overlay { display: none; }
+
+  .header { padding-block: 40px; }
+
+  .header.active { padding-block: 15px; }
+
+  .header.header_anim { animation: slide-in 1s ease forwards; }
+
+  @keyframes slide-in {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+  }
+
+  .navbar,
+  .navbar.active { all: unset; }
+
+  .navbar_list {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+  }
+  .navbar_item:not(:last-child) { border-block-end: none; }
+
+  .navbar_link {
+    color: hsl(247, 35%, 19%);
+    font-weight: 600;
+    padding-inline: 10px;
+  }
+}

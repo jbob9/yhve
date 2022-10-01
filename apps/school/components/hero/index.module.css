@@ -1,0 +1,42 @@
+
+.hero {
+  background: var(--gradient);
+  padding: 150px 0 var(--section-padding);
+}
+
+.hero_banner { margin-bottom: 30px; }
+
+.hero_banner img { width: 100%; }
+
+.hero_title { 
+  @apply text-7xl font-extrabold mb-5;
+ }
+
+.hero .section_text { 
+  @apply text-lg font-semibold mb-8;
+ }
+
+@media (min-width: 768px) {
+  .hero_banner {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+}
+.hero .container{
+  @apply mx-4;
+}
+
+
+@media (min-width: 1024px) {
+  .hero .container {
+    @apply grid items-center;
+    grid-template-columns: 4fr 6fr;
+    gap: 50px;
+  }
+
+  .hero_banner {
+    margin-bottom: 0;
+    order: 1;
+  }
+}
+
