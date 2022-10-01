@@ -6,7 +6,7 @@ const Contact = () => {
     <Layout plain>
       <div className="pt-28 pb-10 mx-6">
         <h1 className="text-4xl font-bold pb-6">Contact</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-wrap-reverse ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 flex-wrap-reverse">
           <form>
             <div className="space-y-4">
               <Input
@@ -21,10 +21,9 @@ const Contact = () => {
               name="telephone"
               label="Telephone"
               />
-
               <div>
-              <label htmlFor="description" className="font-bold text-gray-800 text-sm">Description</label>
-              <textarea rows={6} name="description" className="form-control mt-1"></textarea>
+                <label htmlFor="description" className="font-bold text-gray-800 text-sm">Description</label>
+                <textarea rows={6} name="description" className="form-control mt-1"/>
               </div>
             </div>
             <div className="text-right">
