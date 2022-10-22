@@ -1,5 +1,5 @@
 .back_top_btn {
-  @apply fixed z-30 rounded-full text-white bg-teal-500 opacity-0;
+  @apply fixed z-30 rounded-full text-white bg-indigo-500 opacity-0;
   bottom: 20px;
   right: 30px;
   font-size: 22px;

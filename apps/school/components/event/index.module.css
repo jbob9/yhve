@@ -1,0 +1,65 @@
+
+
+
+
+.event_card {
+  position: relative;
+  background-color: var(--cultured-1);
+  border-radius: var(--radius-6);
+  overflow: hidden;
+}
+
+.event_card .card_banner {
+  background-color: var(--light-gray);
+  aspect-ratio: 370 / 250;
+}
+
+.event_card .badge {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  background-color: var(--ultramarine-blue);
+  color: var(--white);
+  padding: 5px 15px;
+  border-radius: 0 50px 50px 0;
+  font-weight: var(--fw-700);
+}
+
+.event_card .card_content { padding: 25px 20px; }
+
+.event_card .card_address {
+  font-size: var(--fs-6);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.event_card .card_address ion_icon {
+  color: var(--ultramarine-blue);
+  --ionicon-stroke-width: 40px;
+}
+
+.event_card .h3 {
+  font-size: var(--fs-3);
+  margin-block: 10px;
+  line-height: 1.5;
+}
+
+.event_card .card_title { transition: var(--transition-1); }
+
+.event_card .card+title:is(:hover, :focus) { color: var(--ultramarine-blue); }
+
+.event_card .btn_link {
+  color: var(--ultramarine-blue);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-block-end: 2px solid transparent;
+  transition: var(--transition-1);
+}
+
+.event_card .btn_link:is(:hover, :focus) { border-color: var(--ultramarine-blue); }
+

@@ -1,58 +1,36 @@
 .cta {
-  @apply px-4 pt-8 lg:pt-24 pb-20 mt-8;
-  background: hsl(240, 8%, 18%);
+  background-color: hsl(235, 70%, 60%);;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
 }
 
-.cta_title {
-  @apply text-white mb-7 text-5xl font-bold leading-none tracking-wider;
+.cta_banner {
+  @apply bg-gray-100 rounded-md overflow-hidden;;
+  aspect-ratio: 580 / 380;
+  /* border-radius: var(--radius-6); */
+  /* overflow: hidden; */
+  margin-block-end: 30px;
 }
 
-.cta_banner { 
-  @apply hidden;
-}
-.vector_line { @apply hidden; }
-@media (min-width: 768px) {
-  .cta {
-    @apply relative z-10;
-  }
-  .cta .title_wrapper { max-width: 60%; }
-  .cta_banner {
-    @apply block bg-contain bg-center absolute;
-    background: url("/assets/images/cta-banner.jpg") no-repeat;
-    width: 350px;
-    height: 350px;
-    bottom: -26px;
-    left: 51%;
-  }
-}
+.cta :is(.section_subtitle, .section_title) { color: #fff; }
 
-@media (min-width: 1024px) {
-  .cta .title_wrapper {
-    @apply flex justify-between items-center;
-    gap: 20px;
-  }
+.cta .section_text { margin-block: 20px; }
 
-  .cta_title {
-    @apply relative mb-0;
-    width: calc(100% - 200px);
+@media (min-width: 992px) {
+  .cta .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
   }
-
-  .vector_line {
-    @apply block absolute;
-  }
-  .cta_title .vector_line {
-    right: -64px;
-    bottom: -26px;
-  }
+  .cta .section-text { margin-block: 30px; }
 
   .cta_banner {
-    left: 60%;
-    width: 320px;
-    bottom: -39px;
+    margin-block-end: 0;
+    order: 1;
   }
+}
 
-}
-@media (min-width: 1200px) {
-  .cta .title_wrapper { max-width: 64%; }
-  .cta_banner { left: 68%; }
-}
+

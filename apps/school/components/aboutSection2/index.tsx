@@ -5,7 +5,7 @@ import cn from "classnames"
 const AboutSection2 = () => {
   return (
     <section className={cn("section", s.about)} id="about" aria-label="about">
-        <div className={s.container}>
+        <div className="mx-4 md:mx-10">
 
           <figure className={s.about_banner}>
 
@@ -13,10 +13,10 @@ const AboutSection2 = () => {
               className={cn("w-full", s.about_img)}/>
 
             <img src="./assets/images/about-abs-1.jpg" width="188" height="242" loading="lazy" aria-hidden="true"
-              className={cn(s.abs_img, s.abs_img_1)} alt=""/>
+              className={cn("abs_img", s.abs_img_1)} alt=""/>
 
             <img src="./assets/images/about-abs-2.jpg" width="150" height="200" loading="lazy" aria-hidden="true"
-              className={cn(s.abs_img, s.abs_img_2)} alt=""/>
+              className={cn("abs_img", s.abs_img_2)} alt=""/>
 
           </figure>
 

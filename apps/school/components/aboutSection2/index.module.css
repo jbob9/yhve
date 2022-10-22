@@ -1,10 +1,16 @@
 .about { padding-block-start: 0; }
 
+
 .about_banner {
   background-color: hsl(0, 0%, 80%);
   max-width: max-content;
   aspect-ratio: 450 / 590;
   margin-block-end: 40px;
+}
+@media (min-width: 768px) {
+  .about_banner {
+      margin-inline: 120px 130px;
+  }
 }
 
 .about_img { border-radius: 6px; }
@@ -58,10 +64,10 @@
 }
 
 @media (min-width: 1200px) {
-  .about .container {
+  /* .about .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-  }
+  } */
   .about_banner { margin-inline-start: -30px; }
 }

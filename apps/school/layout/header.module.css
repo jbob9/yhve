@@ -18,7 +18,7 @@
 }
 
 .header_action_btn {
-  @apply text-teal-500 bg-white p-3;
+  @apply text-indigo-500 bg-white p-3;
   border-radius: 4px;
   box-shadow: 0 8px 20px hsla(0, 0%, 0%, 0.06);
 }
@@ -69,7 +69,7 @@
 }
 
 .navbar_link:is(:hover, :focus) { 
-  @apply text-teal-500;
+  @apply text-indigo-500;
  }
 
 .overlay {
