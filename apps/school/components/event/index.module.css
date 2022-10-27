@@ -1,16 +1,16 @@
+.event :is(.section_subtitle, .section_title) { text-align: center; }
 
-
-
+.event .section_title { margin-block-end: 60px; }
 
 .event_card {
   position: relative;
-  background-color: var(--cultured-1);
-  border-radius: var(--radius-6);
+  background-color: hsl(0, 0%, 96%);
+  border-radius: 6px;
   overflow: hidden;
 }
 
 .event_card .card_banner {
-  background-color: var(--light-gray);
+  background-color: hsl(0, 0%, 80%);
   aspect-ratio: 370 / 250;
 }
 
@@ -18,48 +18,31 @@
   position: absolute;
   top: 25px;
   left: 0;
-  background-color: var(--ultramarine-blue);
-  color: var(--white);
+  background-color: hsl(235, 70%, 60%);
+  color: #fff;
   padding: 5px 15px;
   border-radius: 0 50px 50px 0;
-  font-weight: var(--fw-700);
+  font-weight: 700;
 }
 
-.event_card .card_content { padding: 25px 20px; }
-
 .event_card .card_address {
-  font-size: var(--fs-6);
+  font-size: 1.4rem;
   display: flex;
   align-items: baseline;
   gap: 8px;
 }
 
 .event_card .card_address ion_icon {
-  color: var(--ultramarine-blue);
+  color: hsl(235, 70%, 60%);
   --ionicon-stroke-width: 40px;
 }
 
 .event_card .h3 {
-  font-size: var(--fs-3);
+  font-size: 2.4rem;
   margin-block: 10px;
   line-height: 1.5;
 }
 
-.event_card .card_title { transition: var(--transition-1); }
+.event_card .card_title { transition: 0.25s ease; }
 
-.event_card .card+title:is(:hover, :focus) { color: var(--ultramarine-blue); }
-
-.event_card .btn_link {
-  color: var(--ultramarine-blue);
-  font-size: var(--fs-5);
-  font-weight: var(--fw-700);
-  max-width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  border-block-end: 2px solid transparent;
-  transition: var(--transition-1);
-}
-
-.event_card .btn_link:is(:hover, :focus) { border-color: var(--ultramarine-blue); }
-
+.event_card .card+title:is(:hover, :focus) { color: hsl(235, 70%, 60%); }

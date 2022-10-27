@@ -1,20 +1,21 @@
-import React from 'react'
 import EventCard from './event-card'
+import s from "./index.module.css"
+import cn from 'classnames'
 
 const Event = () => {
   return (
-    <section className="section event" id="event" aria-label="event">
-      <div className="container">
+    <section className={cn("section", s.event)} id="event" aria-label="event">
+      <div className="mx-6">
 
-        <p className="section-subtitle">Upcomming Event</p>
+        <p className={s.section_subtitle}>Upcomming Event</p>
 
-        <h2 className="h2 section-title">Let’s Join Our Community</h2>
+        <h2 className={cn("h2", s.section_title)}>Let’s Join Our Community</h2>
 
-        <ul className="grid-list">
-          <li><EventCard/></li>
-          <li><EventCard/></li>
-          <li><EventCard/></li>
-        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <EventCard/>
+          <EventCard/>
+          <EventCard/>
+        </div>
       </div>
     </section> 
   )

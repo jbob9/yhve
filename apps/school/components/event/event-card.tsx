@@ -15,24 +15,21 @@ const EventCard = () => {
 
       <time className={s.badge} dateTime="2022-12-04">04 Dec 2022</time>
 
-      <div className={s.card_content}>
+      <div className="p-5">
 
-      <address className={s.card_address}>
+      <address className="flex space-x-2">
         <IconMapPin/>
         <span className="span">Alpaca Way Anaheim, CA 92805</span>
       </address>
 
-      <h3 className="h3">
+      <h3 className="pt-3 font-semibold text-xl text-gray-700">
         <a href="#" className={s.card_title}>Innovation & Technological Entrepreneurship Team</a>
       </h3>
 
-      <a href="#" className={s.btn_link}>
+      {/* <a href="#" className={s.btn_link}>
         <span className="span">Get Ticket</span>
-        {/* <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon> */}
-      </a>
-
+      </a> */}
       </div>
-
     </div>
   )
 }

@@ -6,7 +6,7 @@ const Cta = () => {
   return (
     <section className={s.cta} style={{backgroundImage: "url('./assets/images/cta-bg.png')"}}>
   
-        <div className={s.container}>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 mx-3 md:mx-6">
 
           <figure className={s.cta_banner}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -16,22 +16,21 @@ const Cta = () => {
             className="h-full w-full object-cover"/>
           </figure>
 
-          <div className={s.cta_content}>
+          <div className="order-2 md:order-1">
 
-            <p className={s.section_subtitle}>Free Workshop</p>
+            <p className="text-white">Free Workshop</p>
 
-            <h2 className={cn("h2", s.section_title)}>Join Our Free Workshops</h2>
+            <h2 className="text-white font-semibold text-2xl">Join Our Free Workshops</h2>
 
-            <p className={s.section_text}>
+            <p className="my-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit amet, consect adipi scing elit, sed do
               eiusmod tempor
               incididunt ut sed do eiusmod tempor incididunt ut labore et dolore aliqua.
             </p>
 
-            <a href="#" className="btn btn-secondary">
+            <a href="#" className="bg-white text-indigo-500 rounded-lg p-4">
               <span className="span">Upcomming Workshop</span>
               <IconArrowRight className="inline"/>
-              {/* <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon> */}
             </a>
 
           </div>
