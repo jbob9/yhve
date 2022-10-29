@@ -1,15 +1,15 @@
 
 .hero {
+  @apply pt-28 md:pt-36;
   background: var(--gradient);
-  padding: 150px 0 var(--section-padding);
 }
 
-.hero_banner { margin-bottom: 30px; }
-
-.hero_banner img { width: 100%; }
+.hero_banner { 
+  @apply mb-7;
+ }
 
 .hero_title { 
-  @apply text-7xl font-extrabold mb-5;
+  @apply text-5xl md:text-7xl font-extrabold mb-5;
  }
 
 .hero .section_text { 

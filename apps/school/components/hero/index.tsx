@@ -8,7 +8,9 @@ const Hero = () => {
         <figure className={s.hero_banner}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="./assets/images/hero-banner.png" 
-          alt="A young lady sits, holding a pen and a notebook."/>
+          alt="A young lady sits, holding a pen and a notebook."
+          className="w-full"
+          />
         </figure>
 
         <div className={s.hero_content}>
