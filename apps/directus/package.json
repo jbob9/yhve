@@ -1,0 +1,16 @@
+{
+  "name": "directus",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Berlensky Oliver <berlenskyoliver99@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "directus": "^9.20.4",
+    "mysql": "^2.18.1"
+  }
+}
